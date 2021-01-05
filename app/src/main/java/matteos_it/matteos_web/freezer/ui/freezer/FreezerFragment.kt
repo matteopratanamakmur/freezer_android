@@ -1,4 +1,4 @@
-package matteos_it.matteos_web.freezer.ui.notifications
+package matteos_it.matteos_web.freezer.ui.freezer
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,20 +10,20 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import matteos_it.matteos_web.freezer.R
 
-class NotificationsFragment : Fragment() {
+class FreezerFragment : Fragment() {
 
-    private lateinit var notificationsViewModel: NotificationsViewModel
+    private lateinit var freezerViewModel: FreezerViewModel
 
     override fun onCreateView(
             inflater: LayoutInflater,
             container: ViewGroup?,
             savedInstanceState: Bundle?
     ): View? {
-        notificationsViewModel =
-                ViewModelProvider(this).get(NotificationsViewModel::class.java)
-        val root = inflater.inflate(R.layout.fragment_notifications, container, false)
-        val textView: TextView = root.findViewById(R.id.text_notifications)
-        notificationsViewModel.text.observe(viewLifecycleOwner, Observer {
+        freezerViewModel =
+                ViewModelProvider(this).get(FreezerViewModel::class.java)
+        val root = inflater.inflate(R.layout.fragment_freezer, container, false)
+        val textView: TextView = root.findViewById(R.id.text_freezer)
+        freezerViewModel.text.observe(viewLifecycleOwner, Observer {
             textView.text = it
         })
         return root

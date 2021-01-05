@@ -1,4 +1,4 @@
-package matteos_it.matteos_web.freezer.ui.dashboard
+package matteos_it.matteos_web.freezer.ui.food
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,20 +10,20 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import matteos_it.matteos_web.freezer.R
 
-class DashboardFragment : Fragment() {
+class FoodFragment : Fragment() {
 
-    private lateinit var dashboardViewModel: DashboardViewModel
+    private lateinit var foodViewModel: FoodViewModel
 
     override fun onCreateView(
             inflater: LayoutInflater,
             container: ViewGroup?,
             savedInstanceState: Bundle?
     ): View? {
-        dashboardViewModel =
-                ViewModelProvider(this).get(DashboardViewModel::class.java)
-        val root = inflater.inflate(R.layout.fragment_dashboard, container, false)
-        val textView: TextView = root.findViewById(R.id.text_dashboard)
-        dashboardViewModel.text.observe(viewLifecycleOwner, Observer {
+        foodViewModel =
+                ViewModelProvider(this).get(FoodViewModel::class.java)
+        val root = inflater.inflate(R.layout.fragment_food, container, false)
+        val textView: TextView = root.findViewById(R.id.text_food)
+        foodViewModel.text.observe(viewLifecycleOwner, Observer {
             textView.text = it
         })
         return root

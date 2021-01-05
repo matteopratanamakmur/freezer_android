@@ -12,14 +12,14 @@
         tools:layout="@layout/fragment_recipe" />
 
     <fragment
-        android:id="@+id/navigation_dashboard"
-        android:name="matteos_it.matteos_web.freezer.ui.dashboard.DashboardFragment"
-        android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        android:id="@+id/navigation_freezer"
+        android:name="matteos_it.matteos_web.freezer.ui.freezer.FreezerFragment"
+        android:label="@string/title_freezer"
+        tools:layout="@layout/fragment_freezer" />
 
     <fragment
-        android:id="@+id/navigation_notifications"
-        android:name="matteos_it.matteos_web.freezer.ui.notifications.NotificationsFragment"
-        android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        android:id="@+id/navigation_food"
+        android:name="matteos_it.matteos_web.freezer.ui.food.FoodFragment"
+        android:label="@string/title_food"
+        tools:layout="@layout/fragment_food" />
 </navigation>
