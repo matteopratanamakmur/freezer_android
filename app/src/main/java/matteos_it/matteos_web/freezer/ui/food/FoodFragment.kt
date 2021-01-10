@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import matteos_it.matteos_web.freezer.R
 
-class FoodFragment : Fragment() {
+class FoodFragment : Fragment(), AddFoodListener {
 
     private lateinit var foodViewModel: FoodViewModel
 
@@ -23,11 +23,18 @@ class FoodFragment : Fragment() {
         foodViewModel =
                 ViewModelProvider(this).get(FoodViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_food, container, false)
+        // 一覧表示（recycler view）
         val recyclerView: RecyclerView = root.findViewById(R.id.fragment_food_recycler)
         recyclerView.layoutManager = LinearLayoutManager(view?.context)
         foodViewModel.foodData.observe(viewLifecycleOwner, Observer {
-            recyclerView.adapter = FoodRecycleViewAdapter(it)
+            recyclerView.adapter = FoodRecycleViewAdapter(it, this)
         })
         return root
+    }
+
+    // 追加ボタンタップ時に呼ばれる
+    override fun buttonTapped(food: FoodData) {
+        // TODO tap 時の処理を書く
+        print(food.name)
     }
 }
