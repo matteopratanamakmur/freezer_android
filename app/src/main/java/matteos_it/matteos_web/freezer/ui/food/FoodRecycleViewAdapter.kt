@@ -13,13 +13,12 @@ class FoodRecycleViewAdapter(private val foodList: ArrayList<FoodData>): Recycle
     // Viewの初期化
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
 //        val image: ImageView
-        val name: TextView
-        val description: TextView
+        val name: TextView = view.findViewById(R.id.row_food_name)
+        val description: TextView = view.findViewById(R.id.row_food_description)
 
         init {
+            // layout の初期設定をする場合
 //            image = view.findViewById(R.id.row_food_image)
-            name = view.findViewById(R.id.row_food_name)
-            description = view.findViewById(R.id.row_food_description)
         }
     }
 
