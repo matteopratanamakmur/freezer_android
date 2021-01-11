@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">freezer</string>
-    <string name="title_recipe">Recipe</string>
-    <string name="title_freezer">Freezer</string>
-    <string name="title_food">Food</string>
+    <string name="title_freezer">冷蔵庫</string>
+    <string name="title_recipe">レシピ</string>
+    <string name="title_food">食べ物</string>
     <string name="back">戻る</string>
 </resources>
