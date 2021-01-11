@@ -34,7 +34,11 @@ class FoodFragment : Fragment(), AddFoodListener {
 
     // 追加ボタンタップ時に呼ばれる
     override fun buttonTapped(food: FoodData) {
-        // TODO tap 時の処理を書く
-        print(food.name)
+        // 詳細画面に遷移
+        val foodDetailFragment = FoodDetailFragment()
+        val fragmentTransaction = parentFragmentManager.beginTransaction()
+        fragmentTransaction.addToBackStack(null)
+        fragmentTransaction.replace(R.id.nav_host_fragment, foodDetailFragment)
+        fragmentTransaction.commit()
     }
 }

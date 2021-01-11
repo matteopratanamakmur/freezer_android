@@ -3,4 +3,5 @@
     <string name="title_recipe">Recipe</string>
     <string name="title_freezer">Freezer</string>
     <string name="title_food">Food</string>
+    <string name="back">戻る</string>
 </resources>
