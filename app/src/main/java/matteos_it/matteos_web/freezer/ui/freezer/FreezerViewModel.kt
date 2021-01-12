@@ -1,13 +1,16 @@
 package matteos_it.matteos_web.freezer.ui.freezer
 
+import android.app.Application
+import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
+import androidx.lifecycle.asLiveData
+import androidx.room.Room
 
-class FreezerViewModel : ViewModel() {
-
-    private val _text = MutableLiveData<String>().apply {
-        value = "This is freezer Fragment"
-    }
-    val text: LiveData<String> = _text
+class FreezerViewModel(application: Application) : AndroidViewModel(application) {
+    private val database =
+        Room.databaseBuilder(application.baseContext, FreezerDatabase::class.java, "freezer")
+            .build()
+    private val freezerDataDao = database.freezerDataDao()
+    val freezerData: LiveData<List<FreezerData>>
+            = freezerDataDao.getAll().asLiveData()
 }

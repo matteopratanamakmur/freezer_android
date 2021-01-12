@@ -17,11 +17,6 @@ class RecipeRecycleViewAdapter(private val recipeList: ArrayList<RecipeData>, pr
         val name: TextView = view.findViewById(R.id.row_recipe_name)
         val description: TextView = view.findViewById(R.id.row_recipe_description)
         var row: LinearLayout = view.findViewById(R.id.row_recipe_row)
-
-        init {
-            // layout の初期設定をする場合
-//            image = view.findViewById(R.id.row_recipe_image)
-        }
     }
 
     // レイアウトの設定
