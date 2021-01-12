@@ -28,9 +28,9 @@ class FreezerFragment : Fragment(), AddFreezerListener {
         val recyclerView: RecyclerView = root.findViewById(R.id.fragment_freezer_recycler)
         recyclerView.layoutManager = LinearLayoutManager(view?.context)
         freezerViewModel.freezerData.observe(viewLifecycleOwner, Observer {
-            val arrayList = arrayListOf<FreezerData>()
-            recyclerView.adapter = FreezerRecycleViewAdapter(arrayList, this)
-//            recyclerView.adapter = FreezerRecycleViewAdapter(it, this)
+//            val arrayList = arrayListOf<FreezerData>()
+//            recyclerView.adapter = FreezerRecycleViewAdapter(arrayList, this)
+            recyclerView.adapter = FreezerRecycleViewAdapter(it, this)
         })
         return root
     }

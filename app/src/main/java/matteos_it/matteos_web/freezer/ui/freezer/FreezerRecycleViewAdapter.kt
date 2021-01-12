@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import matteos_it.matteos_web.freezer.R
 
 
-class FreezerRecycleViewAdapter(private val freezerList: ArrayList<FreezerData>, private val listener: AddFreezerListener): RecyclerView.Adapter<FreezerRecycleViewAdapter.ViewHolder>() {
+class FreezerRecycleViewAdapter(private val freezerList: List<FreezerData>, private val listener: AddFreezerListener): RecyclerView.Adapter<FreezerRecycleViewAdapter.ViewHolder>() {
 
     // Viewの初期化
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
