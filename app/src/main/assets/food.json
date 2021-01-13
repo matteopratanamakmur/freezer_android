@@ -1,20 +1,20 @@
 [
     {
         "id": 1,
-        "name": "carrot",
-        "description": "Carrot is ...",
+        "name": "にんじん",
+        "description": "にんじんとは ...",
         "imageName": "dummy"
     },
     {
         "id": 2,
-        "name": "onion",
-        "description": "Onion is ...",
+        "name": "たまねぎ",
+        "description": "たまねぎとは ...",
         "imageName": "dummy"
     },
     {
         "id": 3,
-        "name": "potatoes",
-        "description": "Potatoes is ...",
+        "name": "じゃがいも",
+        "description": "じゃがいもとは ...",
         "imageName": "dummy"
     }
 ]

@@ -32,10 +32,16 @@ class FoodFragment : Fragment(), AddFoodListener {
         return root
     }
 
-    // 追加ボタンタップ時に呼ばれる
+    // ボタンタップ時に呼ばれる
     override fun buttonTapped(food: FoodData) {
-        // 詳細画面に遷移
+        // 詳細画面フラグメント
         val foodDetailFragment = FoodDetailFragment()
+        // 渡すデータ
+        val bundle = Bundle()
+        bundle.putString("name", food.name)
+        bundle.putString("description", food.description)
+        foodDetailFragment.arguments = bundle;
+        // 詳細画面に遷移
         val fragmentTransaction = parentFragmentManager.beginTransaction()
         fragmentTransaction.addToBackStack(null)
         fragmentTransaction.replace(R.id.nav_host_fragment, foodDetailFragment)

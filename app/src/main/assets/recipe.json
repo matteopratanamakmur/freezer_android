@@ -1,15 +1,15 @@
 [
     {
         "id": 1,
-        "name": "curry_rice",
-        "description": "Curry rice is ...",
+        "name": "カレーライス",
+        "description": "カレーライスとは ...",
         "imageName": "dummy",
         "foodNums": "1,2,2"
     },
     {
         "id": 2,
-        "name": "stew",
-        "description": "Stew is ...",
+        "name": "シチュー",
+        "description": "シチューとは ...",
         "imageName": "dummy",
         "foodNums": "0,1,1"
     }

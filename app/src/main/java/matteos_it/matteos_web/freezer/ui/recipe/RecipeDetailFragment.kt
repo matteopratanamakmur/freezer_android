@@ -19,9 +19,13 @@ class RecipeDetailFragment : Fragment() {
         // 必要な情報を設定
         val nameView: TextView = root.findViewById(R.id.detail_recipe_name)
         val descriptionView: TextView = root.findViewById(R.id.detail_recipe_description)
+        val foodNumsView: TextView = root.findViewById(R.id.detail_recipe_food_nums)
         val buttonView: Button = root.findViewById(R.id.detail_recipe_back_button)
-        nameView.text = "name"
-        descriptionView.text = "description"
+        // 値を取り出して設定
+        val bundle = arguments
+        nameView.text = bundle?.getString("name");
+        descriptionView.text = bundle?.getString("description");
+        foodNumsView.text = bundle?.getString("foodNums");
         buttonView.setOnClickListener {
             parentFragmentManager.popBackStack()
         }

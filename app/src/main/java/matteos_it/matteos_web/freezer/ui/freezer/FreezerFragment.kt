@@ -28,14 +28,12 @@ class FreezerFragment : Fragment(), AddFreezerListener {
         val recyclerView: RecyclerView = root.findViewById(R.id.fragment_freezer_recycler)
         recyclerView.layoutManager = LinearLayoutManager(view?.context)
         freezerViewModel.freezerData.observe(viewLifecycleOwner, Observer {
-//            val arrayList = arrayListOf<FreezerData>()
-//            recyclerView.adapter = FreezerRecycleViewAdapter(arrayList, this)
             recyclerView.adapter = FreezerRecycleViewAdapter(it, this)
         })
         return root
     }
 
-    // 追加ボタンタップ時に呼ばれる
+    // ボタンタップ時に呼ばれる
     override fun buttonTapped(freezerData: FreezerData) {
         // TODO 実装
         print("TODO")
